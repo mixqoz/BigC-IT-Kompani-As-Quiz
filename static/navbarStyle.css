@@ -1,14 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    background-color: transparent;
+    justify-content: center;
+}
+
+.navBarContents {
+    position: inherit;
+    background-color: aliceblue;
+}
+
 ul {
+    display: flex;
+    max-width: 1200px;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: aliceblue;
+    background-color: transparent;
 }
 
 ul li {
     float: left;
     border-right: 1px solid #bbbbbb;
+    padding: 2px;
 }
 
 ul li a {
@@ -16,6 +38,7 @@ ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    justify-content: center;
 }
 
 ul li:last-child {
