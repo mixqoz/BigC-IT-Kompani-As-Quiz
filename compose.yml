@@ -1,18 +1,32 @@
 services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: bigc
+      MYSQL_USER: bigcuser
+      MYSQL_PASSWORD: bigcpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./stillingerDB.sql:/docker-entrypoint-initdb.d/stillingerDB.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   app:
     build: .
-
-    image: bigc-it_quiz_app:1.0
-
     container_name: BigC-IT_quiz
     ports:
       - "5000:1040"
-
-    volumes:
-      - .:/app
-
+    depends_on:
+      db:
+        condition: service_healthy
     environment:
-      - FLASK_ENV=development 
-
-    restart: no
+      - FLASK_ENV=development
+    restart: "no"

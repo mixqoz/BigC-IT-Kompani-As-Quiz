@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='recruitStyle.css') }}">
-	
-	<link href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+    
+    <link href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
 
-	<link rel="icon" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
-	<link rel="icon" type="image/x-icon" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
-	<link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
     <title>Våre Stillinger</title>
 </head>
 <body>
@@ -17,9 +17,35 @@
         {% include "navbar.html" %}
     </header>
 
-    
+    <section class="infoSection">
+        <h1 class="title"><u>Ledige stillinger</u></h1>
+        <br>
+        <hr>
+        <h4>
+            Ønsker du å jobbe i et internasjonalt IT-selskap som ekspanderer daglig?
+            Du er hjertelig velkommen til å søke på ledige stillinger hos oss.
+            Last opp din CV og fortell oss hva du kan og hva du vil, så blir du kanskje innkalt til intervju.
+            Under finner du informasjon om alle nye og ledige stillinger i BigC IT Kompani.
+        </h4>
+    </section>
 
-    
+    <section class="tableSection">
+        <table>
+            <tr>
+                <th>Stillingsbetegnelse</th>
+                <th>Sted</th>
+                <th>Beskrivelse</th>
+            </tr>
+
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job.title }}</td>
+                <td>{{ job.location }}</td>
+                <td>{{ job.description }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
 
 </body>
 </html>
