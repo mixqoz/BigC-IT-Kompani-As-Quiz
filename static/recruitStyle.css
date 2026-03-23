@@ -15,38 +15,53 @@ header {
 }
 
 .title {
-    margin-top: 15%;
-    color: white;
-    font-size: clamp(24px, 6vw, 48px);
-    letter-spacing: 2px;
-    text-align: center;
-    width: 100%;
-    
+  margin-top: 15%;
+  color: white;
+  font-size: clamp(24px, 6vw, 48px);
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
 }
 
 hr {
-    width: 80%;
-    color: #da967d;
+  width: 80%;
+  color: #da967d;
 }
 
 h4 {
-    margin-top: 2%;
-    color: white;
-    font-size: clamp(10px, 3vw, 20px);
-    letter-spacing: 1px;
-    text-align: left;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 2%;
+  color: white;
+  font-size: clamp(10px, 3vw, 20px);
+  letter-spacing: 1px;
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-table {
+.tableSection {
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 th, td {
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #da967d;
+  color: rgb(5, 5, 5);
+  padding: 12, 0, 10, 0px;
+  font-size: clamp(10px, 6vw, 20px);
+}
+
+td {
+  color: whitesmoke;
+}
+
+.jobTitle {
+  font-weight: bold;
 }
