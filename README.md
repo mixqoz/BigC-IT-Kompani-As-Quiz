@@ -1,4 +1,4 @@
-# BigC-IT-Kompani-As-Rekruttering
+# BigC IT Kompani As -- Rekruttering
 
 BigC IT Kompanis rekrutteringsnettside, utviklet for å gjøre prosessen mer engasherende og motiverende for kandidater. I stedet for en tradisonell og ofte kjedelig søknadsopplevelse hvor en ikke vet om de er helt riktig for rollen, møter brukere en interaktiv og underholdene måte for å se om de har potensial for en rollen i kompaniet.
 
